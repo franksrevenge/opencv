@@ -1269,12 +1269,15 @@ public:
     pointIdxsOfClusters[i] are keypoint indices that belong to the i -th cluster (word of vocabulary)
     returned if it is non-zero.
     */
-    CV_WRAP_AS(computeEx) void compute( InputArray keypointDescriptors, OutputArray imgDescriptor,
+    void compute( InputArray keypointDescriptors, OutputArray imgDescriptor,
                   std::vector<std::vector<int> >* pointIdxsOfClusters=0 );
     // compute() is not constant because DescriptorMatcher::match is not constant
 
     CV_WRAP_AS(compute) void compute2( const Mat& image, std::vector<KeyPoint>& keypoints, CV_OUT Mat& imgDescriptor )
     { compute(image,keypoints,imgDescriptor); }
+    
+    CV_WRAP_AS(computeEx) void compute3( const Mat& keypointDescriptors, CV_OUT Mat& imgDescriptor )
+	{ compute(keypointDescriptors, imgDescriptor); } 
 
     /** @brief Returns an image descriptor size if the vocabulary is set. Otherwise, it returns 0.
     */
