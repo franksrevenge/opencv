@@ -1269,7 +1269,7 @@ public:
     pointIdxsOfClusters[i] are keypoint indices that belong to the i -th cluster (word of vocabulary)
     returned if it is non-zero.
     */
-    void compute( InputArray keypointDescriptors, OutputArray imgDescriptor,
+    CV_WRAP_AS(computeEx) void compute( InputArray keypointDescriptors, OutputArray imgDescriptor,
                   std::vector<std::vector<int> >* pointIdxsOfClusters=0 );
     // compute() is not constant because DescriptorMatcher::match is not constant
 
