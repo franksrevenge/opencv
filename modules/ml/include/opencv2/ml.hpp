@@ -388,7 +388,7 @@ public:
     CV_WRAP static Ptr<NormalBayesClassifier> create();
     
     
-    CV_WRAP static Ptr<NormalBayesClassifier> load(const String &fn)
+    CV_WRAP Ptr<NormalBayesClassifier> load(const String &fn)
     {
         return Algorithm::load<NormalBayesClassifier>(fn);
     }    
@@ -476,7 +476,7 @@ public:
      */
     CV_WRAP static Ptr<KNearest> create();
     
-    CV_WRAP static Ptr<KNearest> load(const String &fn)
+    CV_WRAP Ptr<KNearest> load(const String &fn)
     {
         return Algorithm::load<KNearest>(fn);
     }    
@@ -726,7 +726,7 @@ public:
     CV_WRAP static Ptr<SVM> create();
     
     
-    CV_WRAP static Ptr<SVM> load(const String &fn)
+    CV_WRAP Ptr<SVM> load(const String &fn)
     {
         return Algorithm::load<SVM>(fn);
     }     
@@ -923,7 +923,7 @@ public:
      */
     CV_WRAP static Ptr<EM> create();
     
-    CV_WRAP static Ptr<EM> load(const String &fn)
+    CV_WRAP Ptr<EM> load(const String &fn)
     {
         return Algorithm::load<EM>(fn);
     }    
@@ -1117,7 +1117,7 @@ public:
      */
     CV_WRAP static Ptr<DTrees> create();
     
-    CV_WRAP static Ptr<DTrees> load(const String &fn)
+    CV_WRAP Ptr<DTrees> load(const String &fn)
     {
         return Algorithm::load<DTrees>(fn);
     }    
@@ -1177,7 +1177,7 @@ public:
      */
     CV_WRAP static Ptr<RTrees> create();
     
-    CV_WRAP static Ptr<RTrees> load(const String &fn)
+    CV_WRAP Ptr<RTrees> load(const String &fn)
     {
         return Algorithm::load<RTrees>(fn);
     }    
@@ -1232,7 +1232,7 @@ public:
     Use StatModel::train to train the model, Algorithm::load\<Boost\>(filename) to load the pre-trained model. */
     CV_WRAP static Ptr<Boost> create();
     
-    CV_WRAP static Ptr<Boost> load(const String &fn)
+    CV_WRAP Ptr<Boost> load(const String &fn)
     {
         return Algorithm::load<Boost>(fn);
     }    
@@ -1425,7 +1425,7 @@ public:
      */
     CV_WRAP static Ptr<ANN_MLP> create();
 
-    CV_WRAP static Ptr<ANN_MLP> load(const String &fn)
+    CV_WRAP Ptr<ANN_MLP> load(const String &fn)
     {
         return Algorithm::load<ANN_MLP>(fn);
     }    
@@ -1517,7 +1517,7 @@ public:
      */
     CV_WRAP static Ptr<LogisticRegression> create();
 
-    CV_WRAP static Ptr<LogisticRegression> load(const String &fn)
+    CV_WRAP Ptr<LogisticRegression> load(const String &fn)
     {
         return Algorithm::load<LogisticRegression>(fn);
     }    
