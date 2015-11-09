@@ -384,6 +384,11 @@ public:
     /** Creates empty model
     Use StatModel::train to train the model after creation. */
     CV_WRAP static Ptr<NormalBayesClassifier> create();
+
+    CV_WRAP Ptr<NormalBayesClassifier> load(const String &fn)
+    {
+        return Algorithm::load<NormalBayesClassifier>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -466,6 +471,11 @@ public:
     The static method creates empty %KNearest classifier. It should be then trained using StatModel::train method.
      */
     CV_WRAP static Ptr<KNearest> create();
+
+    CV_WRAP Ptr<KNearest> load(const String &fn)
+    {
+        return Algorithm::load<KNearest>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -709,6 +719,11 @@ public:
     Use StatModel::train to train the model. Since %SVM has several parameters, you may want to
     find the best parameters for your problem, it can be done with SVM::trainAuto. */
     CV_WRAP static Ptr<SVM> create();
+
+    CV_WRAP Ptr<SVM> load(const String &fn)
+    {
+        return Algorithm::load<SVM>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -901,6 +916,12 @@ public:
     can use one of the EM::train\* methods or load it from file using Algorithm::load\<EM\>(filename).
      */
     CV_WRAP static Ptr<EM> create();
+
+
+    CV_WRAP Ptr<EM> load(const String &fn)
+    {
+        return Algorithm::load<EM>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -1089,6 +1110,11 @@ public:
     file using Algorithm::load\<DTrees\>(filename).
      */
     CV_WRAP static Ptr<DTrees> create();
+
+    CV_WRAP Ptr<DTrees> load(const String &fn)
+    {
+        return Algorithm::load<DTrees>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -1143,6 +1169,11 @@ public:
     Algorithm::load to load the pre-trained model.
      */
     CV_WRAP static Ptr<RTrees> create();
+
+    CV_WRAP Ptr<RTrees> load(const String &fn)
+    {
+        return Algorithm::load<RTrees>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -1192,6 +1223,11 @@ public:
     /** Creates the empty model.
     Use StatModel::train to train the model, Algorithm::load\<Boost\>(filename) to load the pre-trained model. */
     CV_WRAP static Ptr<Boost> create();
+
+    CV_WRAP Ptr<Boost> load(const String &fn)
+    {
+        return Algorithm::load<Boost>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -1379,6 +1415,11 @@ public:
     Note that the train method has optional flags: ANN_MLP::TrainFlags.
      */
     CV_WRAP static Ptr<ANN_MLP> create();
+
+    CV_WRAP Ptr<ANN_MLP> load(const String &fn)
+    {
+        return Algorithm::load<ANN_MLP>(fn);
+    }
 };
 
 /****************************************************************************************\
@@ -1465,6 +1506,12 @@ public:
     Creates Logistic Regression model with parameters given.
      */
     CV_WRAP static Ptr<LogisticRegression> create();
+
+
+    CV_WRAP Ptr<LogisticRegression> load(const String &fn)
+    {
+        return Algorithm::load<LogisticRegression>(fn);
+    }
 };
 
 /****************************************************************************************\
